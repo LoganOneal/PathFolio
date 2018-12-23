@@ -11,6 +11,10 @@ $font-path: "../assets/fonts";
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
+//button hover color
+$button-ios-background-color-hover: #208F7E;
+$button-wp-background-color-hover: #208F7E;
+$button-md-background-color-hover: #208F7E;
 
 @import "ionic.globals";
 
@@ -38,7 +42,9 @@ $colors: (
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+
+  grey:     #DFE3E6
 );
 
 

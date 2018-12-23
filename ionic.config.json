@@ -1,5 +1,7 @@
 {
-  "name": "mbti",
-  "app_id": "",
+  "name": "Path Folio",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

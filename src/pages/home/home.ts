@@ -11,15 +11,12 @@ export class HomePage {
 
   step = 1;
   responseMap: any;
-  eCount = 0;
-  iCount = 0;
-  sCount = 0;
-  nCount = 0;
-  tCount = 0;
-  fCount = 0;
-  jCount = 0;
-  pCount = 0;
-  results = "";
+  mathCount = 0;
+  designCount = 0;
+  codeCount = 0;
+  cyberCount = 0;
+  artCount = 0;
+  results = [];
 
   constructor(public navCtrl: NavController,
               public mbtiProvider: MbtiProvider) {
@@ -29,78 +26,43 @@ export class HomePage {
 
   resetQuiz() {
     this.step = 1;
-    this.iCount = 0;
-    this.eCount = 0;
-    this.sCount = 0;
-    this.nCount = 0;
-    this.tCount = 0;
-    this.fCount = 0;
-    this.jCount = 0;
-    this.pCount = 0;
-    this.results = "";
+    this.mathCount = 0;
+    this.designCount = 0;
+    this.codeCount = 0;
+    this.cyberCount = 0;
+    this.artCount = 0;
+    this.results = [];
   }
 
-  buttonPressed(i) {
+  buttonPressed(i, type) {
     console.log("button " + i + "pressed")
-    if (this.step < 70) {
+    console.log(Object.keys(this.responseMap).length)
+    console.log(this.step);
+
+    if (this.responseMap[this.step].type == "Math") {
+      this.mathCount += this.mathCount + i;
+    }
+    if (this.responseMap[this.step].type == "Design") {
+      this.designCount += i;
+    }
+    if (this.responseMap[this.step].type == "Coding") {
+      this.codeCount += i;
+    }
+    if (this.responseMap[this.step].type == "Cybersecurity") {
+      this.cyberCount += i;
+    }
+    if (this.responseMap[this.step].type == "Art") {
+      this.artCount += i;
+    }
+
+    if (this.step < Object.keys(this.responseMap).length) {
       this.step++
     } else {
-      
-      if (this.iCount > this.eCount) {
-        this.results += "I";
-      } else {
-        this.results += "E";
-      }
-      if (this.sCount > this.nCount) {
-        this.results += "S";
-      } else {
-        this.results += "N";
-      }
-      if (this.tCount > this.fCount) {
-        this.results += "T";
-      } else {
-        this.results += "F";
-      }
-      if (this.jCount > this.pCount) {
-        this.results += "J";
-      } else {
-        this.results += "P";
-      }
+      this.results = [this.mathCount, this.designCount, this.codeCount, this.cyberCount, this.artCount]
       console.log("quiz finished, you are " + this.results);
-    }
-    var letter = '';
+      console.log(this.results)
+        }
 
-    if (i == 1) {
-      letter = this.mbtiProvider.responseMap[this.step].r1type;
-    }
-    
-    if (i == 2) {
-      letter = this.mbtiProvider.responseMap[this.step].r2type;
-    }
-    
-    if (letter == "i") {
-        this.iCount++;
-    }
-    if (letter == "e") {
-        this.eCount++;
-    }
-    if (letter == "s") {
-        this.sCount++;
-    }
-    if (letter == "n") {
-        this.nCount++;
-    }
-    if (letter == "t") {
-        this.tCount++;
-    }
-    if (letter == "f") {
-        this.fCount++;
-    }
-    if (letter == "j") {
-        this.jCount++;
-    }
-    if (letter == "p") {
-        this.pCount++;
-    }
   }
+  
 };

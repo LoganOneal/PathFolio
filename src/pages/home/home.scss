@@ -1,18 +1,11 @@
 page-home {
+  //Questions Option Buttons 1-5
   .q-btn {
-    width: 49%;
-    height: 75%;
-  }
-  #q-1 {
-    float: left;
-    background-color: #123134;
+    background-color: #2CBBA7;
+    font-size: 17pt;
   }
 
-  #q-2 {
-    float: right;
-  }
-
-  .counter {
+  .data {
     text-align: center;
     display: block;
     width: 100%;
@@ -20,6 +13,43 @@ page-home {
     position: absolute;
     bottom: 20px;
     left: 0;
+  }
+
+  .options {
+    margin: 0 auto; 
+  }
+
+  .reset {
+    text-align: center;
+    display: block;
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+  }
+
+
+// Navbar
+.toolbar-background {
+  background: linear-gradient(110deg, #E1E2E5 80%, #2CBAA7 20%);
+}
+  #counter {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    left: 5%;
+    float: left;
+  }
+
+  #logo {
+    float: right;
+  }
+
+  //Question Text
+  #question {
+    text-align: center;
   }
 
 }
