@@ -43,4 +43,6 @@ import { MbtiProvider } from '../providers/mbti/mbti';
     MbtiProvider
   ]
 })
+
 export class AppModule {}
+  

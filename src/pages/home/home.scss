@@ -2,7 +2,7 @@ page-home {
   //Questions Option Buttons 1-5
   .q-btn {
     background-color: #2CBBA7;
-    font-size: 17pt;
+    font-size: 15pt;
   }
 
   .data {
@@ -41,6 +41,7 @@ page-home {
     position: relative;
     left: 5%;
     float: left;
+    font-size: 20pt;
   }
 
   #logo {
@@ -50,6 +51,6 @@ page-home {
   //Question Text
   #question {
     text-align: center;
-  }
 
+  }
 }
