@@ -40,7 +40,7 @@ export class MbtiProvider {
     "4": {
       number: "4",
       type: "Cybersecurity",
-      q: "Question About Networking/Cybersecurity",
+      q: "Question About Networking/Cybersecurity interest",
       r1: "1",
       r2: "2",
       r3: "3",
@@ -51,6 +51,16 @@ export class MbtiProvider {
       number: "5",
       type: "Art",
       q: "Question About Art Abilities / enjoyment of art",
+      r1: "1",
+      r2: "2",
+      r3: "3",
+      r4: "4",
+      r5: "5"
+    },
+    "6": {
+      number: "6",
+      type: "Web",
+      q: "Question About Web Design Abilitis",
       r1: "1",
       r2: "2",
       r3: "3",

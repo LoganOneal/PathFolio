@@ -16,12 +16,18 @@ export class HomePage {
   codeCount = 0;
   cyberCount = 0;
   artCount = 0;
+  webCount = 0;
   results = [];
 
   constructor(public navCtrl: NavController,
               public mbtiProvider: MbtiProvider) {
     this.responseMap = this.mbtiProvider.responseMap;
+  }
 
+  goTo(results) {
+    this.navCtrl.push(AboutPage, {
+      data: results
+    });
   }
 
   resetQuiz() {
@@ -31,6 +37,7 @@ export class HomePage {
     this.codeCount = 0;
     this.cyberCount = 0;
     this.artCount = 0;
+    this.webCount = 0;
     this.results = [];
   }
 
@@ -54,11 +61,15 @@ export class HomePage {
     if (this.responseMap[this.step].type == "Art") {
       this.artCount += i;
     }
+    if (this.responseMap[this.step].type == "Web") {
+      this.artCount += i;
+    }
 
     if (this.step < Object.keys(this.responseMap).length) {
       this.step++
     } else {
-      this.results = [this.mathCount, this.designCount, this.codeCount, this.cyberCount, this.artCount]
+      // Order Matters: Math, Design, Coding, Cybersecurity, Art, Web Design...
+      this.results = [this.mathCount, this.designCount, this.codeCount, this.cyberCount, this.artCount, this.webCount]
       console.log("quiz finished, you are " + this.results);
       console.log(this.results)
         }
