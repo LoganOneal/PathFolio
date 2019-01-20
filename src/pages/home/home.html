@@ -1,7 +1,8 @@
 <ion-header>
     <ion-navbar>
-      <h1 id="counter">Question {{responseMap[step].number}} of 5</h1>
-      <img alt="logo" height="40" style="float: right; margin-right: 4%;" src="../assets/img/stem.png">
+      <!--<h1 id="counter">Question {{responseMap[step].number}} of 6</h1>-->
+      <img alt="logo" height="40" style="float: left; margin-left: 4%;" src="../assets/img/stem.png">
+      <img alt="logo" height="40" style="float: right; margin-right: 1%;" src="../assets/img/title.png">
     </ion-navbar>
 </ion-header>
 
@@ -14,11 +15,12 @@
     <button *ngIf="results == ''" ion-button large full type="button" class="q-btn" (click)="buttonPressed(3)">{{responseMap[step].r3}}</button>
     <button *ngIf="results == ''" ion-button large full type="button" class="q-btn" (click)="buttonPressed(4)">{{responseMap[step].r4}}</button>
     <button *ngIf="results == ''" ion-button large full type="button" class="q-btn" (click)="buttonPressed(5)">{{responseMap[step].r5}}</button>
+    <button *ngIf="done == true" ion-button color="secondary" (click)="goTo()">See Results</button>
   </div>
 
 
       <ion-img style="display: block; margin: auto; width: 60%; height: 55%" src="assets/img/landn.png"></ion-img>
-
+      <progress-bar [progress]="loadProgress"></progress-bar>
 
   <!--
   <button ion-button (click)="resetQuiz()" class="reset">Reset</button>

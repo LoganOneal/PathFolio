@@ -32,7 +32,11 @@ page-home {
 
 // Navbar
 .toolbar-background {
-  background: linear-gradient(110deg, #E1E2E5 80%, #2CBAA7 20%);
+  background: linear-gradient(-70deg, #2CBAA7 20%, #E1E2E5 80%);
+}
+#ntest {
+  background: linear-gradient(45deg, #2CBAA7, #E1E2E5);
+  background: linear-gradient(10deg, #2CBAA7 80%, #E1E2E5 20%);
 }
   #counter {
     width: 60%;

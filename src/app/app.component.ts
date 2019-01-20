@@ -4,8 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 //switched the rootpage to home page so you cant see tabs, to change this just switch rootpage = TabPage
-import { TabsPage } from '../pages/tabs/tabs';
+//import { HomePage } from '../pages/home/home';
+import { PathPage } from '../pages/path/path';
 import { HomePage } from '../pages/home/home';
+
 
 
 @Component({

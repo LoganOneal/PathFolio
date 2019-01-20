@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+      <h1 id="counter">Path Folio</h1>
+      <img alt="logo" height="40" style="float: right; margin-right: 4%;" src="../assets/img/stem.png">
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+  
+  <h1 *ngIf="results != ''" style="text-align:center;">{{responseMap["Design"].c1.title}}</h1>
+
+  
+      <ion-content class="card-background-page">
+          <ion-grid style="height: 100%">
+          <ion-row justify-content-center align-items-center style="height: 100%">
+
+          <!--
+          Design Path
+          -->
+          <ion-card>
+            <img src="../assets/img/card-front.png"/>
+            <div class="card-title">{{responseMap["Design"].c1.title}}</div>
+            <div class="card-subtitle">41 Listings</div>
+          </ion-card>
+
+          <ion-card>
+              <img src="../assets/img/card-front.png"/>
+              <div class="card-title">São Paulo</div>
+              <div class="card-subtitle">41 Listings</div>
+            </ion-card>
+
+            <ion-card>
+                <img src="../assets/img/card-front.png"/>
+                <div class="card-title">São Paulo</div>
+                <div class="card-subtitle">41 Listings</div>
+              </ion-card>
+
+            </ion-row>
+            </ion-grid>
+        </ion-content>
+
+
+
+  <!--
+  <button ion-button (click)="resetQuiz()" class="reset">Reset</button>
+  
+  Notes <
+    {{responseMap["Design"].c1.title}}
+
+    <div *ngIf="results != ''"> </div>
+
+    >
+  -->
+</ion-content>
