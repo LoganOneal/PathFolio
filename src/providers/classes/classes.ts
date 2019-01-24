@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class ClassProvider {
 
   responseMap = {
-    "Design": {
+    "1": {
       c1: {
         title: "Digital Arts & Design 1",
         desc: "sdfdsfdsfdsfdsfsd"
@@ -17,13 +17,13 @@ export class ClassProvider {
         desc: "sdfdsfdsdsfdsfdsffdsfdsfsd"
       }
     },
-    "Coding": {
+    "2": {
       c1: {
-        title: "Digital Arts & Design 1",
+        title: "Danother",
         desc: "sdfdsfdsfdsfdsfsd"
       },
       c2: {
-        title: "Digital Arts & Design 1",
+        title: "Digital dsfsd & Design 1",
         desc: "sdfdsfdsfdsfdsfsd"
       }
     },

@@ -1,0 +1,43 @@
+page-landing {
+  // Navbar
+  .toolbar-background {
+    background: linear-gradient(-70deg, #2CBAA7 20%, #E1E2E5 80%);
+  }
+    #logo {
+      float: right;
+    }
+
+
+    //animation
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: linear;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+      }
+      @-webkit-keyframes bounce {
+        0%, 100% {
+          -webkit-transform: translateY(0);
+        }
+        50% {
+          -webkit-transform: translateY(-5px);
+        }
+      }
+      @keyframes bounce {
+        0%, 100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-5px);
+        }
+      }
+      .bounce {
+        -webkit-animation-name: bounce;
+        animation-name: bounce;
+      }
+
+  }

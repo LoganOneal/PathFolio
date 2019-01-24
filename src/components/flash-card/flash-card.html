@@ -1,0 +1,27 @@
+<div class="flip-container" (click)="flip()" [class.flipped]="flipped">
+
+  <div class="flipper">
+
+      <div class="front" id="front">
+          <ng-content select=".flash-card-front"></ng-content>
+
+          <div class="alts"  (click)='switch()'>
+            {{inputObject.alt}}
+          </div>
+
+      </div>
+
+      <div class="back">
+          <ng-content select=".flash-card-back"></ng-content>
+      </div>
+
+  </div>
+
+</div>
+<!--
+<ion-card>
+  <img src="../assets/img/card-front.png"/>
+  <div class="card-title">{{title}}</div>
+  <div class="card-subtitle"></div>
+</ion-card>
+-->

@@ -5,6 +5,7 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { PathPage } from '../pages/path/path';
+import { LandingPage } from '../pages/landing/landing';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -16,6 +17,7 @@ import { MbtiProvider } from '../providers/mbti/mbti';
 import { ClassProvider } from '../providers/classes/classes';
 
 import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
+import { FlashCardComponent } from '../components/flash-card/flash-card';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
     MyApp,
     HomePage,
     PathPage,
-    ProgressBarComponent
+    ProgressBarComponent,
+    FlashCardComponent,
+    LandingPage
   ],
   imports: [
     BrowserModule,
@@ -34,7 +38,8 @@ import { ProgressBarComponent } from '../components/progress-bar/progress-bar';
   entryComponents: [
     MyApp,
     HomePage,
-    PathPage
+    PathPage,
+    LandingPage,
   ],
   providers: [
     StatusBar,

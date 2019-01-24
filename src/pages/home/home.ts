@@ -22,6 +22,7 @@ export class HomePage {
   webCount = 0;
   final = '';
   results = [];
+  loadProgress = 0;
 
   constructor(public navCtrl: NavController,
               public mbtiProvider: MbtiProvider) {
@@ -62,7 +63,7 @@ export class HomePage {
     console.log("button " + i + "pressed")
     console.log(Object.keys(this.responseMap).length)
     console.log(this.step);
-
+    this.loadProgress = Math.round((this.step/Object.keys(this.responseMap).length) * 100);
     if (this.responseMap[this.step].type == "Math") {
       this.mathCount += this.mathCount + i;
     }

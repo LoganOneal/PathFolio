@@ -7,33 +7,22 @@
 
 <ion-content>
   
-  <h1 *ngIf="results != ''" style="text-align:center;">{{responseMap["Design"].c1.title}}</h1>
+  <h1 *ngIf="results != ''" style="text-align:center;">{{responseMap["1"].c1.title}}</h1>
 
   
       <ion-content class="card-background-page">
           <ion-grid style="height: 100%">
           <ion-row justify-content-center align-items-center style="height: 100%">
 
-          <!--
-          Design Path
-          -->
-          <ion-card>
-            <img src="../assets/img/card-front.png"/>
-            <div class="card-title">{{responseMap["Design"].c1.title}}</div>
-            <div class="card-subtitle">41 Listings</div>
-          </ion-card>
+              <flash-card *ngFor="let class of classes" [inputObject] = "class">
 
-          <ion-card>
-              <img src="../assets/img/card-front.png"/>
-              <div class="card-title">São Paulo</div>
-              <div class="card-subtitle">41 Listings</div>
-            </ion-card>
-
-            <ion-card>
-                <img src="../assets/img/card-front.png"/>
-                <div class="card-title">São Paulo</div>
-                <div class="card-subtitle">41 Listings</div>
-              </ion-card>
+                <div class="flash-card-front">
+                  <h1>{{class.title}}</h1>
+                </div>
+        
+                <div class="flash-card-back">{{class.description}}</div>
+        
+            </flash-card>
 
             </ion-row>
             </ion-grid>

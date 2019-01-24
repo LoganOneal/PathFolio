@@ -7,6 +7,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //import { HomePage } from '../pages/home/home';
 import { PathPage } from '../pages/path/path';
 import { HomePage } from '../pages/home/home';
+import { LandingPage } from '../pages/landing/landing';
 
 
 
@@ -14,7 +15,7 @@ import { HomePage } from '../pages/home/home';
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage:any = HomePage;
+  rootPage:any = LandingPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
