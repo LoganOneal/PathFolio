@@ -1,4 +1,4 @@
 # PathFolio
 Created for the L&N STEM Academy
 
-Helps students to visualize thier course selections
+Helps students to visualize their course selections
